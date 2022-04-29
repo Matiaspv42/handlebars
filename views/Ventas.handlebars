@@ -1,0 +1,14 @@
+{{#if usuario}}
+    <h1>
+        Bienvenido: {{usuario}}
+    </h1>
+    <h3>Tus ventas hoy fueron las siguientes:</h3>
+    <ul>
+        {{#each ventas}}
+        <li>${{this}}</li>
+        {{/each}}
+    </ul>
+{{/if}}
+{{#unless usuario}}
+    <h1>Inicie sesión para ver sus ventas</h1>
+{{/unless}}
